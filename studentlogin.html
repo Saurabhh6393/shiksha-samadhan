@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<title>Student Regisation Page </title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <!--<script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Registration Success . Now you can login!");
+    });
+  });
+  </script>-->
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #191313;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			
+			<!-- Login Form -->
+			<form action = "/LearnEd_E-learning_Website-master/backend/studentlogin.php"  method="post" id="login" class="input-group" >
+				<div class="inp">
+					<img src="images/icon/user.png"><input type="text"  name="name" id="email" class="input-field" placeholder="Username or Email Address" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" name = "password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			
+			
+			<!-- Registration Form -->
+			<form  action="/LearnEd_E-learning_Website-master/backend/studentregister.php" method="post" id="register" class="input-group">
+				<input type="text"  name="name" class="input-field" placeholder="Full Name" required="required">
+				<input type="email"  name="email" class="input-field" placeholder="Email Address" required="required">
+				<input type="password" name="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+				<input type="password" name="conpassword" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

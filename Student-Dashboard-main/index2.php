@@ -1,24 +1,38 @@
 <?php
- include 'connection.php';
-
  
+ $_server="localhost";
+ $_username ="root";
+ $_password = "";
+ $_database = "db project";
+ 
+ $con = mysqli_connect($_server , $_username , $_password , $_database);
+      if(!$con){
+         die("database connection due to failed" . mysqli_connect_error());
+      }
+     
+      session_start();
 
 
+     $name =  $_SESSION['name'];
+//  $sql = "select * from `st full detail` where name ='$name";
+$sql = "SELECT * FROM `st full detail`" ;
  
- 
- $sql = "select * from `st register` ";
  $result = mysqli_query($con,$sql);
- 
- session_start();
+ $num = mysqli_num_rows($result);
 
-
- $name =  $_SESSION['name'];
- 
-
- 
+ echo $num;
     
+ //while( $row = mysqli_fetch_array($result)){
+  while( $row = mysqli_fetch_array($result)){
     
-  
+     
+     $email = $row['email'];
+     $phone = $row['phone'];
+     $course = $row['course'];
+     $address = $row['address'];
+
+    
+ }
 ?>
 
 
@@ -182,15 +196,15 @@
                 </div>
                 <div class="about">
                     <h5>Course</h5>
-                    <p>..........</p>
+                    <p><?php echo $course?></p>
                     <h5>DOB</h5>
-                    <p>.........</p>
+                    <p></p>
                     <h5>Contact</h5>
-                    <p>.......</p>
+                    <p><?php echo $phone?></p>
                     <h5>Email</h5>
-                    <p>.........</p>
+                    <p><?php echo $email?></p>
                     <h5>Address</h5>
-                    <p>........</p>
+                    <p><?php echo $address?></p>
                 </div>
             </div>
         </aside>

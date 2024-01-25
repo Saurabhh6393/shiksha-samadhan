@@ -1,38 +1,23 @@
 <?php
+ include 'connection.php';
+
  
- $_server="localhost";
- $_username ="root";
- $_password = "";
- $_database = "db project";
- 
- $con = mysqli_connect($_server , $_username , $_password , $_database);
-      if(!$con){
-         die("database connection due to failed" . mysqli_connect_error());
-      }
-     
-      session_start();
 
 
-     $name =  $_SESSION['name'];
-//  $sql = "select * from `st full detail` where name ='$name";
-$sql = "SELECT * FROM `st full detail`" ;
  
+ 
+ $sql = "select * from `st register` ";
  $result = mysqli_query($con,$sql);
- $num = mysqli_num_rows($result);
+ 
+ session_start();
 
+
+ $name =  $_SESSION['name'];
+ 
  
     
- //while( $row = mysqli_fetch_array($result)){
-  while( $row = mysqli_fetch_array($result)){
     
-     
-     $email = $row['email'];
-     $phone = $row['phone'];
-     $course = $row['course'];
-     $address = $row['address'];
-
-    
- }
+  
 ?>
 
 
@@ -48,7 +33,9 @@ $sql = "SELECT * FROM `st full detail`" ;
     <link rel="stylesheet" href="style.css">
     <style>
 
-/*.container .form {
+     
+
+.container .form {
   margin-top: 30px;
 }
 .form .input-box {
@@ -131,25 +118,21 @@ $sql = "SELECT * FROM `st full detail`" ;
   background: rgb(88, 56, 250);
 }
 /*Responsive*/
-/*@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .form .column {
     flex-wrap: wrap;
   }
   .form :where(.gender-option, .gender) {
     row-gap: 15px;
   }
-}*/
-.about button{
-  background-color: blue;
 }
-
 </style>
 </head>
 <body>
     <header>
         <div class="logo" title="University Management System">
-            <img src="./images/logo.png" alt="">
-            <h2>U<span class="danger">M</span>S</h2>
+            <img src="logo.png"  alt="logo">
+            <!--<h2>U<span class="danger">M</span>S</h2>-->
         </div>
         <div class="navbar">
             <a href="index.html" class="active">
@@ -168,7 +151,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
             </a>-->
-            <a href="/LearnEd_E-learning_Website-master/Studentlogin.html">
+            <a href="/LearnEd_E-learning_Website-master/Studentlogin.php">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>
             </a>
@@ -200,31 +183,28 @@ $sql = "SELECT * FROM `st full detail`" ;
                 </div>
                 <div class="about">
                     <h5>Course</h5>
-                    <p><?php echo $course?></p>
-                    
+                    <p>..........</p>
+                   
                     <h5>Contact</h5>
-                    <p><?php echo $phone?></p>
+                    <p>.......</p>
                     <h5>Email</h5>
-                    <p><?php echo $email?></p>
+                    <p>.........</p>
                     <h5>Address</h5>
-                    <p><?php echo $address?></p>
+                    <p>........</p>
                 </div>
-                <br>
-                <br>
-                <a href="dashboardform.php">
-                <button>Edit Profile</button>
-                </a>
+                
             </div>
+            
         </aside>
         
         
 
         <main>
-        <!--<div>
+        <div>
                 <form action="/LearnEd_E-learning_Website-master/backend/stfulldetail.php" class="form" method="post">
                     <div class="input-box">
                       <label>Full Name</label>
-                      <input type="text" name="name" placeholder="Enter full name" required />
+                      <input type="text" name="name" value=<?php echo $name; ?> disabled placeholder="Enter full name" required />
                     </div>
                     <div class="input-box">
                       <label>Email Address</label>
@@ -271,7 +251,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                     </div>
                     <button>Submit</button>
                   </form>   
-            </div>-->
+            </div>
             <!--<h1>Attendance</h1>
             <div class="subjects">
                 <div class="eg">
@@ -326,7 +306,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                 </div>
             </div>-->
 
-            <div class="timetable" id="timetable">
+            <!--<div class="timetable" id="timetable">
                 <div>
                     <span id="prevDay">&lt;</span>
                     <h2>Today's Timetable</h2>
@@ -344,7 +324,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                     </thead>
                     <tbody></tbody>
                 </table>
-            </div>
+            </div>-->
         </main>
 
         <div class="right">

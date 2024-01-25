@@ -164,11 +164,11 @@ $sql = "SELECT * FROM `st full detail`" ;
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Examination</h3>
             </a>
-            <!--<a href="password.html">
+            <a href="password.html">
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
-            </a>-->
-            <a href="/LearnEd_E-learning_Website-master/Studentlogin.html">
+            </a>
+            <a href="/LearnEd_E-learning_Website-master/Studentlogin.php">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>
             </a>

@@ -37,7 +37,7 @@
             </script>';
 
 
-            header("location: /LearnEd_E-learning_Website-master/Student-Dashboard-main/dashboardform.php");
+            header("location: /LearnEd_E-learning_Website-master/Student-Dashboard-main/index.php");
          }
       }
    }

@@ -18,7 +18,7 @@ $sql = "INSERT INTO `db project`.`st full detail` ( `name`, `email`, `phone`, `c
 $result = mysqli_query($con,$sql);
 if($result){
     $insert=true;
-    header("location: /LearnEd_E-learning_Website-master/Student-Dashboard-main/index2.php" );
+    header("location: /LearnEd_E-learning_Website-master/Student-Dashboard-main/index.php" );
   
 }
 }

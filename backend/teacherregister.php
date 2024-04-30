@@ -18,7 +18,7 @@
        $password= $_POST['password'];
        $conpassword = $_POST['conpassword'];
 
-       $ExistSql = "SELECT * FROM `db project`. `st register` WHERE name = '$name'";
+       $ExistSql = "SELECT * FROM `db project`. `te register` WHERE name = '$name'";
        $result = mysqli_query($con,$ExistSql);
        $numExistRows = mysqli_num_rows($result);
 

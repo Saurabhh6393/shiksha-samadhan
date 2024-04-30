@@ -139,27 +139,52 @@ $sql = "SELECT * FROM `st full detail`" ;
     row-gap: 15px;
   }
 }*/
-.about button{
-  background-color: blue;
+.profile button{
+  height: 40px;
+  width: 100px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.profile button:hover {
+  background: rgb(88, 56, 250);
+}
+
+.class button{
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.class button:hover {
+  background: rgb(88, 56, 250);
 }
 
 </style>
-</head>
+</head> 
 <body>
     <header>
-        <div class="logo" title="University Management System">
-            <img src="./images/logo.png" alt="">
-            <h2>U<span class="danger">M</span>S</h2>
-        </div>
+    <div class="logo"><img src="logo - Copy.png" alt="logo"></div>
         <div class="navbar">
-            <a href="index.html" class="active">
+            <a href="index.php" class="active">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
             <a href="timetable.html" onclick="timeTableAll()">
                 <span class="material-icons-sharp">today</span>
                 <h3>Time Table</h3>
-            </a> 
+            </a>
             <a href="exam.html">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Examination</h3>
@@ -168,7 +193,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
             </a>-->
-            <a href="/LearnEd_E-learning_Website-master/Studentlogin.html">
+            <a href="/LearnEd_E-learning_Website-master/index.html">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>
             </a>
@@ -210,7 +235,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                     <p><?php echo $address?></p>
                 </div>
                 <br>
-                <br>
+                
                 <a href="dashboardform.php">
                 <button>Edit Profile</button>
                 </a>
@@ -345,6 +370,11 @@ $sql = "SELECT * FROM `st full detail`" ;
                     <tbody></tbody>
                 </table>
             </div>
+            <div class="class">
+            <a href="/LearnEd_E-learning_Website-master/videocall/reciever/reciever.html">
+              <button>join the class</button>
+            </a>
+            </div>
         </main>
 
         <div class="right">
@@ -366,7 +396,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                 </div>
             </div>
 
-            <div class="leaves">
+            <!--<div class="leaves">
                 <h2>Teachers on leave</h2>
                 <div class="teacher">
                     <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
@@ -389,7 +419,7 @@ $sql = "SELECT * FROM `st full detail`" ;
                         <small class="text-muted">Day Span : Full Day</small>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>

@@ -16,7 +16,7 @@
          $name = $_POST["name"];
          $password = $_POST["password"];
 
-         $sql = "SELECT * FROM `db project`.`te project` WHERE name = '$name'";
+         $sql = "SELECT * FROM `db project`.`te register` WHERE name = '$name'";
          $result = mysqli_query($con,$sql);
 
          $num = mysqli_num_rows($result);
@@ -26,18 +26,20 @@
                if(password_verify($password , $row['password'])){
                   $login = true;
 
+                  session_start();
+               
+                  $_SESSION['name']=$name;
+
                   echo '<script>
-                  $(document).ready(function(){
-                   $("form").submit(function(){
+                  
                     alert("Login Successfully. Welcome to Shiksha Samadhan");
-                   )};
-                  )};
+                  
                   </script>';
                }
                }
             
             }
-            
+            header("location: /LearnEd_E-learning_Website-master/teacher-Dashboard-main/tedashboardform.php");
          }
  
 ?>

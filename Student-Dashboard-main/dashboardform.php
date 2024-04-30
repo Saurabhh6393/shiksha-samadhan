@@ -28,13 +28,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="shortcut icon" href="./images/logo - Copy.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
 
-     
 
+	
 .container .form {
   margin-top: 30px;
 }
@@ -129,21 +129,21 @@
 </style>
 </head>
 <body>
-    <header>
+<header>
         <div class="logo" title="University Management System">
-            <img src="logo.png"  alt="logo">
-            <!--<h2>U<span class="danger">M</span>S</h2>-->
+            <img src="logo - Copy.png" alt="">
+            
         </div>
         <div class="navbar">
-            <a href="index.html" class="active">
+            <a href="#" class="active">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
-            <a href="timetable.html" onclick="timeTableAll()">
+            <a href="#" onclick="timeTableAll()">
                 <span class="material-icons-sharp">today</span>
                 <h3>Time Table</h3>
-            </a> 
-            <a href="exam.html">
+            </a>
+            <a href="#">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Examination</h3>
             </a>
@@ -151,10 +151,12 @@
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
             </a>-->
-            <a href="/LearnEd_E-learning_Website-master/Studentlogin.html">
+            <a href="/LearnEd_E-learning_Website-master/index.html">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>
             </a>
+            
+			
         </div>
         <div id="profile-btn">
             <span class="material-icons-sharp">person</span>
@@ -244,10 +246,6 @@
                     <div class="input-box address">
                       <label>Address</label>
                       <input type="text" name="address" placeholder="Enter street address" required />
-                     
-                      
-                        
-                       
                     </div>
                     <button>Submit</button>
                   </form>   
@@ -346,7 +344,7 @@
                 </div>
             </div>
 
-            <div class="leaves">
+            <!--<div class="leaves">
                 <h2>Teachers on leave</h2>
                 <div class="teacher">
                     <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
@@ -369,7 +367,7 @@
                         <small class="text-muted">Day Span : Full Day</small>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>

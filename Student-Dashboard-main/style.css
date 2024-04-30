@@ -93,7 +93,8 @@ header{
     background-color: var(--color-background);
 }
 header.active{box-shadow: var(--box-shadow);}
-header .logo{
+
+/* header .logo{
     display: flex;
     gap: .8rem;
     margin-right: auto;
@@ -101,8 +102,20 @@ header .logo{
 header .logo img{
     width: 6rem;
     height: 2rem;
+} */
+.logo img{
+    position: absolute;
+    left: 50px;
+    top: -10px;
+    margin: 5px;
+    width: 120px;
+    cursor: pointer;
+    transition: all 1s;
 }
-
+.logo {
+    transition: 1s;
+    margin-left: 30%;
+}
 header,
 header .navbar{
     display: flex;
@@ -113,8 +126,6 @@ header .navbar{
 }
 header .navbar a{
     display: flex;
-    
-    left: 2000px;
     margin-left: 2rem;
     gap: 1rem;
     align-items: center;
